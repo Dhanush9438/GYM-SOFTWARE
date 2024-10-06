@@ -14,7 +14,7 @@ const App = () => {
 
     const fetchMembers = async () => {
         try {
-            const response = await fetch('http://localhost:5000/members');
+            const response = await fetch('https://gym-software.onrender.com/members');
             const data = await response.json();
             setMembers(data);
         } catch (error) {
@@ -25,7 +25,7 @@ const App = () => {
     const addOrUpdateMember = async (member) => {
         try {
             if (currentMember) {
-                await fetch(`http://localhost:5000/members/${currentMember._id}`, {
+                await fetch(`https://gym-software.onrender.com/members/${currentMember._id}`, {
                     method: 'PUT',
                     headers: {
                         'Content-Type': 'application/json',
@@ -34,7 +34,7 @@ const App = () => {
                 });
                 alert('Member updated successfully!');
             } else {
-                await fetch('http://localhost:5000/members/add', {
+                await fetch('https://gym-software.onrender.com/members/add', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -53,7 +53,7 @@ const App = () => {
 
     const deleteMember = async (id) => {
         try {
-            await fetch(`http://localhost:5000/members/${id}`, {
+            await fetch(`https://gym-software.onrender.com/members/${id}`, {
                 method: 'DELETE',
             });
             alert('Member deleted successfully!');
