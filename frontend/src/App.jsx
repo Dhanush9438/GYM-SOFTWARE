@@ -88,7 +88,7 @@ const App = () => {
                             element={<MemberForm onSubmit={addOrUpdateMember} currentMember={currentMember} />}
                         />
                         <Route
-                            path="/members"
+                            path="/member"
                             element={<MemberList members={members} onEdit={editMember} onDelete={deleteMember} />}
                         />
                     </Routes>
