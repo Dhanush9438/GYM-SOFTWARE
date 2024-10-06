@@ -1,12 +1,10 @@
 import React, { useState } from 'react';
 import './MemberList.css';
-import { useNavigate } from 'react-router-dom';
 import MemberDetail from '../MemberDetail/MemberDetail';
 
 const MemberList = ({ members, onEdit, onDelete }) => {
     const [selectedMember, setSelectedMember] = useState(null); // State to store selected member
     const [searchTerm, setSearchTerm] = useState(''); // State to handle search input
-    const navigate = useNavigate(); // useNavigate hook to programmatically navigate
 
     const handleView = (member) => {
         setSelectedMember(member); // Set the selected member to show details
@@ -14,11 +12,6 @@ const MemberList = ({ members, onEdit, onDelete }) => {
 
     const handleClose = () => {
         setSelectedMember(null); // Reset selected member when closed
-    };
-
-    const handleEdit = (member) => {
-        onEdit(member); // Pass the member to the parent component (App.js)
-        navigate('/'); // Navigate to the MemberForm page ("/")
     };
 
     // Filter and sort members based on the Gym ID search term
@@ -67,7 +60,7 @@ const MemberList = ({ members, onEdit, onDelete }) => {
                             <td>{member.packageDetails}</td>
                             <td>{member.entryBy}</td>
                             <td>
-                                <button onClick={() => handleEdit(member)}>Update</button>
+                                <button onClick={() => onEdit(member)}>Update</button>
                                 <button onClick={() => onDelete(member._id)}>Delete</button>
                                 <button onClick={() => handleView(member)}>View</button> {/* View Button */}
                             </td>
@@ -76,8 +69,14 @@ const MemberList = ({ members, onEdit, onDelete }) => {
                 </tbody>
             </table>
 
-            {/* Render MemberDetail if selected */}
-            <MemberDetail member={selectedMember} onClose={handleClose} />
+            {/* Render MemberDetail if selected in a modal box */}
+            {selectedMember && (
+                <div className="modal">
+                    <div className="modal-content">
+                        <MemberDetail member={selectedMember} onClose={handleClose} />
+                    </div>
+                </div>
+            )}
         </div>
     );
 };
