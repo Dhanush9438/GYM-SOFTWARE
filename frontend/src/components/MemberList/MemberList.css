@@ -1,5 +1,4 @@
-/* MemberList.css */
-
+/* General Styling */
 .search-container {
   display: flex;
   justify-content: flex-start;
@@ -128,6 +127,7 @@
   padding: 20px;
   border-radius: 8px;
   width: 100%;
+  max-width: 500px; /* Limit the width for larger screens */
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -150,4 +150,63 @@
 
 .member-detail button:hover {
   background-color: #d32f2f;
+}
+
+/* Responsive Styling */
+
+/* For small screens (up to 600px) */
+@media screen and (max-width: 600px) {
+
+  /* Stack search input and button vertically */
+  .search-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .search-input {
+    border-radius: 4px;
+  }
+
+  /* Make table scrollable */
+  .member-list table {
+    display: block;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  /* Reduce padding for table cells */
+  .member-list th, .member-list td {
+    padding: 8px;
+  }
+
+  /* Adjust button layout for smaller screens */
+  .action-buttons {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .member-list button {
+    width: 100%; /* Make buttons full-width */
+    margin: 2px;
+  }
+}
+
+/* For medium screens (up to 900px) */
+@media screen and (max-width: 900px) {
+
+  .member-list {
+    padding: 15px;
+  }
+
+  .member-list h2 {
+    font-size: 22px;
+  }
+
+  .member-list th, .member-list td {
+    font-size: 14px;
+  }
+
+  .member-list button {
+    font-size: 12px;
+  }
 }
