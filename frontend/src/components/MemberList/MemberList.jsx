@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './MemberList.css';
-import { useNavigate } from 'react-router-dom'; // Import useNavigate for navigation
-import MemberDetail from '../MemberDetail/MemberDetail'; // Import the MemberDetail component
+import { useNavigate } from 'react-router-dom';
+import MemberDetail from '../MemberDetail/MemberDetail';
 
 const MemberList = ({ members, onEdit, onDelete }) => {
     const [selectedMember, setSelectedMember] = useState(null); // State to store selected member
@@ -21,10 +21,12 @@ const MemberList = ({ members, onEdit, onDelete }) => {
         navigate('/'); // Navigate to the MemberForm page ("/")
     };
 
-    // Filter members based on the Gym ID search term
-    const filteredMembers = members.filter((member) =>
-        member.gymId.toLowerCase().includes(searchTerm.toLowerCase())
-    );
+    // Filter and sort members based on the Gym ID search term
+    const filteredMembers = members
+        .filter((member) =>
+            member.gymId.toLowerCase().includes(searchTerm.toLowerCase())
+        )
+        .sort((a, b) => a.gymId.localeCompare(b.gymId)); // Sort members by gymId
 
     return (
         <div className="member-list">
@@ -32,13 +34,13 @@ const MemberList = ({ members, onEdit, onDelete }) => {
             
             {/* Search Input */}
             <div className='search-container'>
-            <input
-                type="text"
-                placeholder="Search by Gym ID"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-                className="search-input"
-            />
+                <input
+                    type="text"
+                    placeholder="Search by Gym ID"
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="search-input"
+                />
             </div>
 
             <table>
@@ -65,7 +67,7 @@ const MemberList = ({ members, onEdit, onDelete }) => {
                             <td>{member.packageDetails}</td>
                             <td>{member.entryBy}</td>
                             <td>
-                                <button onClick={() => handleEdit(member)}>Update</button> {/* Update Button */}
+                                <button onClick={() => handleEdit(member)}>Update</button>
                                 <button onClick={() => onDelete(member._id)}>Delete</button>
                                 <button onClick={() => handleView(member)}>View</button> {/* View Button */}
                             </td>
