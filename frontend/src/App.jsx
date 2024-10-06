@@ -77,7 +77,7 @@ const App = () => {
                             <Link to="/">Add Member</Link>
                         </li>
                         <li>
-                            <Link to="/members">Manage Members</Link>
+                            <Link to="/member">Manage Members</Link>
                         </li>
                     </ul>
                 </nav>
