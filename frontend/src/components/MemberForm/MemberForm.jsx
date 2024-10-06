@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import "./MemberForm.css"; // Importing CSS
+import "./MemberForm.css"; 
 
 const MemberForm = ({ onSubmit, currentMember }) => {
   const [name, setName] = useState("");
@@ -8,17 +8,17 @@ const MemberForm = ({ onSubmit, currentMember }) => {
   const [address, setAddress] = useState("");
   const [packageDetails, setPackageDetails] = useState("");
   const [entryBy, setEntryBy] = useState("");
-  const [gymId, setGymId] = useState(""); // Added gymId state
+  const [gymId, setGymId] = useState(""); 
 
   useEffect(() => {
     if (currentMember) {
       setName(currentMember.name);
       setPhone(currentMember.phone);
-      setFeesDate(currentMember.feesDate.split("T")[0]); // Format date
+      setFeesDate(currentMember.feesDate.split("T")[0]); 
       setAddress(currentMember.address);
       setPackageDetails(currentMember.packageDetails);
       setEntryBy(currentMember.entryBy);
-      setGymId(currentMember.gymId); // Set gymId for editing
+      setGymId(currentMember.gymId); 
     } else {
       resetForm();
     }

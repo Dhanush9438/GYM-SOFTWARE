@@ -7,7 +7,7 @@ const memberSchema = new mongoose.Schema({
     address: { type: String, required: true },
     packageDetails: { type: String, required: true },
     entryBy: { type: String, required: true },
-    gymId: { type: String, required: true } // Added gymId field
+    gymId: { type: String, required: true } 
 }, { timestamps: true });
 
 const Member = mongoose.model('Member', memberSchema);

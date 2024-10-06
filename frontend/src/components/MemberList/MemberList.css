@@ -1,4 +1,3 @@
-/* General Styling */
 .search-container {
   display: flex;
   justify-content: flex-start;
@@ -6,7 +5,7 @@
 }
 
 .search-input {
-  flex-grow: 1; /* Allow the input field to take up available space */
+  flex-grow: 1; 
   padding: 10px;
   border: 1px solid #ccc;
   border-radius: 4px 0 0 4px;
@@ -58,11 +57,10 @@
   background-color: #f1f1f1;
 }
 
-/* Button Group Styling */
 .action-buttons {
   display: flex;
-  justify-content: space-between; /* Adds spacing between buttons */
-  gap: 10px; /* Space between buttons */
+  justify-content: space-between; 
+  gap: 10px; 
 }
 
 .member-list button {
@@ -73,7 +71,7 @@
   cursor: pointer;
   transition: background-color 0.3s ease;
   font-size: 14px;
-  flex: 1; /* Make buttons take equal width */
+  flex: 1; 
   display: inline-block;
   text-align: center;
 }
@@ -109,7 +107,6 @@
   background-color: #d32f2f;
 }
 
-/* Styling for MemberDetail component popup */
 .member-detail-overlay {
   position: fixed;
   top: 0;
@@ -127,7 +124,7 @@
   padding: 20px;
   border-radius: 8px;
   width: 100%;
-  max-width: 500px; /* Limit the width for larger screens */
+  max-width: 500px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
@@ -152,12 +149,8 @@
   background-color: #d32f2f;
 }
 
-/* Responsive Styling */
-
-/* For small screens (up to 600px) */
 @media screen and (max-width: 600px) {
 
-  /* Stack search input and button vertically */
   .search-container {
     flex-direction: column;
     align-items: stretch;
@@ -167,31 +160,27 @@
     border-radius: 4px;
   }
 
-  /* Make table scrollable */
   .member-list table {
     display: block;
     width: 100%;
     overflow-x: auto;
   }
 
-  /* Reduce padding for table cells */
   .member-list th, .member-list td {
     padding: 8px;
   }
 
-  /* Adjust button layout for smaller screens */
   .action-buttons {
     flex-direction: column;
     gap: 5px;
   }
 
   .member-list button {
-    width: 100%; /* Make buttons full-width */
+    width: 100%; 
     margin: 2px;
   }
 }
 
-/* Modal container (background) */
 .modal {
   position: fixed;
   z-index: 1;
@@ -199,13 +188,12 @@
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5); /* Transparent background */
+  background-color: rgba(0, 0, 0, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-/* Modal content (the box) */
 .modal-content {
   background-color: white;
   padding: 20px;
@@ -214,9 +202,6 @@
   position: relative;
 }
 
-
-
-/* For medium screens (up to 900px) */
 @media screen and (max-width: 900px) {
 
   .member-list {

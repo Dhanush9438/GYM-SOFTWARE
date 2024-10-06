@@ -1,4 +1,4 @@
-/* App.css */
+
 * {
   margin: 0;
   padding: 0;
@@ -14,16 +14,16 @@ body {
   overflow-x: hidden;
 }
 
-/* Full-width Background Image */
+
 .app-container {
-  width: 100%;  /* Take full width */
+  width: 100%;  
   margin: 0;
   padding: 20px;
-  background-image: url('./assets/back.jpg');  /* Your image path */
-  background-size: cover; /* Ensure the background covers the entire width */
-  background-position: center; /* Center the background image */
-  background-repeat: no-repeat; /* Prevent the background from repeating */
-  background-attachment: fixed; /* Optional: keeps background fixed when scrolling */
+  background-image: url('./assets/back.jpg');  
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat; 
+  background-attachment: fixed; 
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
 }
@@ -32,7 +32,7 @@ body {
   background-color: black;
   padding: 10px 0;
   text-align: center;
-  border-radius: 15px;  /* Remove border-radius to span full width */
+  border-radius: 15px;  
   margin-bottom: 10px;
 }
 
@@ -87,7 +87,7 @@ button:hover {
   padding: 20px;
   background-color: #f4f4f4;
   border-top: 1px solid #ddd;
-  width: 100%;  /* Ensure footer takes full width */
+  width: 100%;  
   margin-top: 20px;
   border-radius: 0;
   position: relative;

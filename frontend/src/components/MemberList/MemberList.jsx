@@ -19,13 +19,11 @@ const MemberList = ({ members, onEdit, onDelete }) => {
         .filter((member) =>
             member.gymId.toLowerCase().includes(searchTerm.toLowerCase())
         )
-        .sort((a, b) => a.gymId.localeCompare(b.gymId)); // Sort members by gymId
+        .sort((a, b) => a.gymId.localeCompare(b.gymId)); 
 
     return (
         <div className="member-list">
             <h2>Manage Members</h2>
-            
-            {/* Search Input */}
             <div className='search-container'>
                 <input
                     type="text"
@@ -62,14 +60,13 @@ const MemberList = ({ members, onEdit, onDelete }) => {
                             <td>
                                 <button onClick={() => onEdit(member)}>Update</button>
                                 <button onClick={() => onDelete(member._id)}>Delete</button>
-                                <button onClick={() => handleView(member)}>View</button> {/* View Button */}
+                                <button onClick={() => handleView(member)}>View</button> 
                             </td>
                         </tr>
                     ))}
                 </tbody>
             </table>
 
-            {/* Render MemberDetail if selected in a modal box */}
             {selectedMember && (
                 <div className="modal">
                     <div className="modal-content">

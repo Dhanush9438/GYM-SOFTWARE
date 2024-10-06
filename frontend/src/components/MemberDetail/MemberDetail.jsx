@@ -1,4 +1,5 @@
 import React from "react";
+import './MemberDetail.css'
 
 const MemberDetail = ({ member, onClose }) => {
   if (!member) return null; // If no member is selected, return null

@@ -1,7 +1,5 @@
-/* MemberForm.css */
-
 .member-form {
-  background-color: rgba(255, 255, 255, 0.9); /* Add transparency to show background */
+  background-color: rgba(255, 255, 255, 0.9); 
   padding: 30px;
   margin: 20px auto;
   max-width: 600px;
@@ -43,7 +41,6 @@
   outline: none;
 }
 
-/* Optional: Add a bit of margin to adjust positioning */
 .member-form {
   margin-top: 20px;
   margin-bottom: 20px;
