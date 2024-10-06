@@ -1,0 +1,153 @@
+/* MemberList.css */
+
+.search-container {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.search-input {
+  flex-grow: 1; /* Allow the input field to take up available space */
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px 0 0 4px;
+  font-size: 16px;
+}
+
+.member-list {
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.member-list h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 10px;
+}
+
+.member-list table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 20px;
+}
+
+.member-list th, 
+.member-list td {
+  border: 1px solid #ddd;
+  padding: 12px;
+  text-align: left;
+  font-size: 16px;
+}
+
+.member-list th {
+  background-color: #f2f2f2;
+  color: #333;
+  font-weight: bold;
+}
+
+.member-list tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.member-list tr:hover {
+  background-color: #f1f1f1;
+}
+
+/* Button Group Styling */
+.action-buttons {
+  display: flex;
+  justify-content: space-between; /* Adds spacing between buttons */
+  gap: 10px; /* Space between buttons */
+}
+
+.member-list button {
+  margin: 5px;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 14px;
+  flex: 1; /* Make buttons take equal width */
+  display: inline-block;
+  text-align: center;
+}
+
+.member-list button:hover {
+  background-color: #ddd;
+}
+
+.member-list button:first-of-type {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.member-list button:first-of-type:hover {
+  background-color: #45a049;
+}
+
+.member-list button:nth-of-type(2) {
+  background-color: #2196F3;
+  color: white;
+}
+
+.member-list button:nth-of-type(2):hover {
+  background-color: #0b7dda;
+}
+
+.member-list button:nth-of-type(3) {
+  background-color: #f44336;
+  color: white;
+}
+
+.member-list button:nth-of-type(3):hover {
+  background-color: #d32f2f;
+}
+
+/* Styling for MemberDetail component popup */
+.member-detail-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.member-detail {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.member-detail h3 {
+  margin-bottom: 20px;
+  color: #333;
+  text-align: center;
+}
+
+.member-detail button {
+  padding: 8px 12px;
+  background-color: #f44336;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: block;
+  margin: 0 auto;
+}
+
+.member-detail button:hover {
+  background-color: #d32f2f;
+}

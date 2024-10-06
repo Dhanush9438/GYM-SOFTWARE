@@ -1,0 +1,50 @@
+/* MemberForm.css */
+
+.member-form {
+  background-color: rgba(255, 255, 255, 0.9); /* Add transparency to show background */
+  padding: 30px;
+  margin: 20px auto;
+  max-width: 600px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  font-family: 'Arial', sans-serif;
+}
+
+.member-form h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #333;
+  font-size: 24px;
+  border-bottom: 2px solid #4CAF50;
+  padding-bottom: 10px;
+}
+
+.member-form label {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.member-form input[type="text"],
+.member-form input[type="date"] {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+
+.member-form input[type="text"]:focus,
+.member-form input[type="date"]:focus {
+  border-color: #4CAF50;
+  outline: none;
+}
+
+/* Optional: Add a bit of margin to adjust positioning */
+.member-form {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
